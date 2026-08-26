@@ -1054,15 +1054,15 @@ td {
 }
 @font-face {
     font-family: "richard grechko node";
-    src: url(/fonts/richard-grechko-node.ttf);
+    src: url(/textwall-stuff/fonts/richard-grechko-node.ttf);
 }
 @font-face {
     font-family: "richard grechko terminal";
-    src: url(/fonts/richard-grechko-terminal-2.ttf);
+    src: url(/textwall-stuff/fonts/richard-grechko-terminal-2.ttf);
 }
 @font-face {
     font-family: "windowsrichard monospace";
-    src: url(/fonts/windowsrichard-monospace.ttf);
+    src: url(/textwall-stuff/fonts/windowsrichard-monospace.ttf);
 }
 @font-face {
   font-family: 'JetBrains Mono';
