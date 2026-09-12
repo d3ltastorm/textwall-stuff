@@ -753,6 +753,11 @@ td {
    font-size: 12px;
    margin: 6px 0 5px 5px;
 }
+p#_msg a::after {
+    content: " ("attr(href)")";
+    font-size: 70%;
+    opacity: 0.7
+}
 .chatbox {
     position: absolute; /* stack chatboxes on top of each other */
     top: 0; /* adjust if you have channel buttons above */
