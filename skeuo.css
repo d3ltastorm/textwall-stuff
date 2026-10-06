@@ -1046,6 +1046,18 @@ td {
     src: url(fonts/CutiveMono-Regular.ttf)
 }
 @font-face {
+    font-family: "richard grechko node";
+    src: url(/textwall-stuff/fonts/richard-grechko-node.ttf);
+}
+@font-face {
+    font-family: "richard grechko terminal";
+    src: url(/textwall-stuff/fonts/richard-grechko-terminal-2.ttf);
+}
+@font-face {
+    font-family: "windowsrichard monospace";
+    src: url(/textwall-stuff/fonts/windowsrichard-monospace.ttf);
+}
+@font-face {
   font-family: 'JetBrains Mono';
   src: url('fonts/JetBrainsMono-Regular.ttf') format('truetype');
   font-weight: 400;
