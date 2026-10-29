@@ -6,15 +6,15 @@ body {
 }
 
 :root {
-    --btn-dim: linear-gradient(to bottom, rgb(124 113 255 / 60%) 0%, rgb(126 115 255 / 90%) 50%, rgb(147 156 255 / 90%) 50%);
-    --btn-default: linear-gradient(to bottom, rgb(79 64 255 / 60%) 0%, rgb(110 98 255 / 90%) 50%, rgb(121 132 255 / 90%) 50%);
-    --btn-hover: linear-gradient(to bottom, rgb(124 113 255 / 60%) 0%, rgb(126 115 255 / 90%) 50%, rgb(147 156 255 / 90%) 50%);
-    --btn-active: linear-gradient(to bottom, rgb(124 113 255 / 60%) 0%, rgb(126 115 255 / 90%) 50%, rgb(147 156 255 / 90%) 50%);
-    --btn-on: linear-gradient(to bottom, rgb(200 255 204 / 60%) 0%, rgb(185 179 255 / 90%) 50%, rgb(224 226 255 / 90%) 50%)
+    --btn-dim: linear-gradient(to bottom, rgb(194 194 194 / 50%) 4%, rgb(194 194 194 / 50%) 50%);
+    --btn-default: linear-gradient(to bottom, rgb(133 133 133 / 50%) 4%, rgb(133 133 133 / 60%) 50%);
+    --btn-hover: linear-gradient(to bottom, rgb(195 190 255 / 50%) 4%, rgb(195 190 255 / 60%) 50%);
+    --btn-active: linear-gradient(to bottom, rgb(130 120 255 / 50%) 4%, rgb(138 128 255 / 60%) 50%);
+    --btn-on: linear-gradient(to bottom, rgb(195 190 255 / 50%) 4%, rgb(195 190 255 / 60%) 50%)
 }
 
 * {
-    font-family: Courier New;
+    font-family: Courier New, ui-monospace;
     -webkit-tap-highlight-color: transparent
 }
 
@@ -39,7 +39,7 @@ h3 {
 }
 .typing-notice {
     display: none;
-    color: #fff;
+    color: #00000060;
     font-size: 10px;
     padding: 0;
     margin: 0;
@@ -95,7 +95,8 @@ h3 {
 
 #info {
     background-image: var(--btn-default);
-    border: 1px solid rgba(39, 39, 39, 0.8);
+    border: 1px solid #fff4;
+    box-shadow: 2px 2px 4px inset #ffffff40;
     color: #fff;
     bottom: 10px;
     left: 50%;
@@ -108,9 +109,8 @@ h3 {
     transition: all 0.9s;
     z-index: 2;
     position: absolute;
-
-    width: 90%;         
-    max-width: 500px; 
+    width: 90%;
+    max-width: 500px;
     overflow-x: auto;
     overflow-y: hidden;
     backdrop-filter: blur(4px);
@@ -141,7 +141,6 @@ h3 {
 #bubbles {
   display: flex;
   flex-flow: column nowrap;
-  gap: 10px;
   margin-left: 0;
   transition: margin-left .12s ease, transform .12s ease, background-color .28s ease;
   align-items: flex-start; 
@@ -162,8 +161,9 @@ body.menu-open #bubbles {
 .bubble {
     pointer-events: all;
     background-image: var(--btn-default);
-    border: 2px inset #b9b4ff;
-    color: #fff;
+    border: 1px solid #fff4;
+    box-shadow: 2px 2px 4px inset #ffffff40;
+    color: #ffffff80;
     border-radius: 0 18px 18px 0;
     align-items: center;
     min-height: 20px;
@@ -195,7 +195,7 @@ body.menu-open #bubbles {
     opacity: 0.5
 }
 #sidemenu {
-    border: 1px solid rgba(49, 49, 49, 0.7);
+    border: 1px solid #fff4;
     background-image: var(--btn-dim);
     color: #fff;
     position: fixed;
@@ -203,6 +203,7 @@ body.menu-open #bubbles {
     left: 0;
     padding: 5px 10px;
     border-radius: 0 5px 5px 0;
+    box-shadow: 4px 4px 15px inset #ffffff44;
     width: 280px;
     height: 540px;
     max-height: 70vh;
@@ -255,7 +256,7 @@ body.menu-open #bubbles {
 }
 .tab-btn {
   appearance:none;-webkit-appearance:none;
-  background-image:var(--btn-default);color:#fff;
+  color:#fff;
   border:1px solid rgba(255,255,255,0.03);
   padding:6px 8px;border-radius:4px;
   text-align:center;cursor:pointer;font-size:13px;
@@ -289,7 +290,7 @@ body.menu-open #bubbles {
 }
 .tab-content input[type="checkbox"]{ margin-right:6px; }
 .tab-content button, .tab-content input[type="submit"], .tab-content .buttonlink {
-  background: rgba(255,255,255,0.03); color: #fff; border: 1px solid rgba(255,255,255,0.04);
+  background: rgba(255,255,255,0.03); color: #fff; border: 1px solid #fff4;
   padding:6px 8px; border-radius:4px; cursor:pointer;
 }
 
@@ -401,12 +402,12 @@ input {
     background-image: var(--btn-default);
     border-radius: 8px;
     padding: 4px;
-    border: 1px solid rgba(139, 139, 139, 0.5);
+    border: 1px solid #fff4;
     box-shadow: 0 4px 12px rgba(139, 139, 139, 0.3);
     backdrop-filter: blur(4px);
 }
 #colourlist {
-    border: 0.56px solid #fff;
+    border: 1px solid #fff4;
     border-radius: 5%;
     display: inline-grid;
     grid-template-columns: 8% 8% 8% 8% 8% 8% 8% 8%;
@@ -431,7 +432,7 @@ input {
 }
 #customcolour {
     margin: 4px;
-    border: 2px solid #fff;
+    border: 1px solid #fff4;
     padding: 0;
     width: 15%;
     height: 50%;
@@ -446,10 +447,10 @@ input {
 
 
 .colour.selected {
-    border: 3px solid #fff
+    border: 1px solid #fff4;
 }
 #customcolour.selected {
-    border: 3px solid #fff
+    border: 1px solid #fff4;
 }
 
 #zoom {
@@ -460,7 +461,7 @@ th,
 td {
     padding: 5px;
     text-align: left;
-    border: 1px solid #fff
+    border: 1px solid #fff4;
 }
 
 #coords {
@@ -558,7 +559,7 @@ td {
     z-index: 2;
     text-align: center;
     transition: all .5s;
-    border: 1px solid rgba(98, 98, 98, 1);
+    border: 1px solid #fff4;
     background-image: var(--btn-default);
     color: #fff;
     margin: 15px;
@@ -612,7 +613,7 @@ td {
 .tpcontent input[type="submit"] {
     margin-top: 5px;
     background-color: #333;
-    border: 1px solid #555;
+    border: 1px solid #fff4;
     color: #fff;
     box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
     transition: all .1s;
@@ -620,7 +621,7 @@ td {
 }
 
 .tpcontent > hr, #walllist hr {
-    border: 0.5px solid rgba(255, 255, 255, 0.2) !important;
+    border: 1px solid #fff4;
     background-color: rgba(70,70,70,0.6) !important;
     padding-top: 0 !important;
     box-shadow: none !important;
@@ -629,7 +630,7 @@ td {
 
 .tpbutton {
     background-color: transparent;
-    border: none;
+    border: 1px solid #fff4;
     padding: 0;
     cursor: pointer;
     padding-top: 9px;
@@ -663,7 +664,7 @@ td {
 }
 
 .walllist {
-    border: 1px solid rgb(166 149 255);
+    border: 1px solid #fff4;
         background-color: rgb(189 173 255 / 25%);
         box-shadow: 0 2px 6px rgb(192 193 255 / 30%) inset;
         margin-top: 5px;
@@ -731,16 +732,16 @@ td {
     transform: translateX(0px);
 }
 .chatcontainer {
-    position: relative; 
+    position: relative;
     width: 300px;
     background-image: var(--btn-dim);
     padding: 12px;
     display: flex;
     flex-direction: column;
     pointer-events: auto;
-    box-shadow: 0 6px 18px rgb(161 28 28 / 35%);
+    box-shadow: 2px 2px 4px inset #ffffff88;
     backdrop-filter: blur(6px);
-    border: 1px solid rgba(212, 217, 217, 0.548);
+    border: 1px solid #fff4;
     gap: 8px;
 }
 #stacker {
@@ -752,11 +753,6 @@ td {
 #_msg{
    font-size: 12px;
    margin: 6px 0 5px 5px;
-}
-p#_msg a::after {
-    content: attr(href);
-    font-size: 70%;
-    opacity: 0.7
 }
 .chatbox {
     position: absolute; /* stack chatboxes on top of each other */
@@ -804,9 +800,8 @@ p#_msg a::after {
 
 #chatmsg {
     border-radius: 1px;
-    border: 1px #666 solid;
+    border: 1px solid #fff4;
     width: 100%;
-    background-color: rgba(75, 69, 69, 0.8);
     user-select: none
 }
 
@@ -819,7 +814,7 @@ p#_msg a::after {
 }
 #chatbutton {
     background-image: var(--btn-default);
-    border: 1px solid #9b9b9b;
+    border: 1px solid #fff4;
     padding: 10px;
     margin-bottom: 10px;
     pointer-events: auto;
@@ -1290,15 +1285,12 @@ p#_msg a::after {
     min-height: 0;              /* ✔ prevents overflow issues */
 }
 
-.channelbar {
-    background: linear-gradient(to bottom, rgb(124 113 255 / 60%) 0%, rgb(73 68 128 / 90%) 50%, rgb(88 93 153 / 90%) 50%);
-    box-shadow: 0 2px 8px rgb(90 85 159 / 80%) inset;
-}
+.channelbar {}
 
 .channelbar > button {
     border-radius: 3px;
     color: #fff;
-    border: 1px solid #ccc;
+    border: 1px solid #fff4;
     background: --btn;
     box-shadow: none;
     padding-left: 3px;
@@ -1349,7 +1341,7 @@ ul::-webkit-scrollbar-thumb {
     bottom: 50px;
     left: 10px;
     background-image: var(--btn-default);
-    border: 1px solid rgba(80, 80, 80, 0.8);
+    border: 1px solid #fff4;
     color: #0f0;
     padding: 5px 10px;
     font-family: monospace;
@@ -1364,7 +1356,7 @@ ul::-webkit-scrollbar-thumb {
     bottom: 80px;
     left: 10px;
     background-image: var(--btn-default);
-    border: 1px solid rgba(80, 80, 80, 0.8);
+    border: 1px solid #fff4;
     color: #0f0;
     padding: 5px 10px;
     font-family: monospace;
@@ -1382,12 +1374,10 @@ input[type="submit"] {
     font-size: 14px;
     font-weight: 500;
     color: #aaa;
-    background-image: var(--btn-default);
-    border: 3px solid #444 ;
+    background-color: transparent;
     border-radius: 4px;
     cursor: pointer;
     transition: all 0.3s ease;
-    box-shadow: 0 2px 8px rgb(171 165 255 / 80%) inset;
 }
 
 
@@ -1427,7 +1417,7 @@ input[type="checkbox"] {
     -webkit-appearance: none;
     width: 16px;
     height: 16px;
-    border: 2px solid #fff;
+    border: 1px solid #fff4;
     border-radius: 4px;
     background-image: var(--btn-dim);
     cursor: pointer;
@@ -1458,7 +1448,7 @@ input[type="checkbox"]:checked::after {
     top: 0px;
     width: 4px;
     height: 8px;
-    border: solid #000;
+    border: 1px solid #fff4;
     border-width: 0 2px 2px 0;
     transform: rotate(45deg);
 }
@@ -1516,7 +1506,7 @@ input[type="range"]::-webkit-slider-thumb {
     background-image: linear-gradient(to bottom, #fff 0%, #ccc 25%, #888 50%);
     /* grey thumb */
     border-radius: 50%;
-    border: 2px solid #666;
+    border: 1px solid #fff4;
     transition: all 0.2s ease;
     cursor: pointer;
     margin-top: -5px;
@@ -1539,7 +1529,7 @@ input[type="range"]::-moz-range-thumb {
     height: 16px;
     background-image: linear-gradient(to bottom, #fff 0%, #ccc 25%, #888 50%);
     border-radius: 50%;
-    border: 2px solid #666;
+    border: 1px solid #fff4;
     cursor: pointer;
     transition: all 0.2s ease;
 }
@@ -1572,7 +1562,7 @@ input[type="range"]::-ms-thumb {
     height: 16px;
     background-image: linear-gradient(to bottom, #fff 0%, #ccc 25%, #888 50%);
     border-radius: 50%;
-    border: 2px solid #666;
+    border: 1px solid #fff4;
     cursor: pointer;
     transition: all 0.2s ease;
 }
@@ -1590,8 +1580,8 @@ textarea {
     padding: 4px 2px;
     color: #fff;
 
-    background: linear-gradient(to bottom, rgb(78 72 149 / 60%) 0%, rgb(54 44 162 / 90%) 50%, rgb(69 77 169 / 90%) 50%);
-    border: 1px solid rgba(200, 200, 200, 0.4);
+    background-color: transparent;
+    border: 1px solid #fff4;
     border-radius: 2px;
 
     outline: none;
@@ -1603,7 +1593,7 @@ input[type="search"]:hover,
 input[type="number"]:hover,
 input[type="password"]:hover,
 textarea:hover {
-    background: linear-gradient(to bottom, rgb(124 113 255 / 60%) 0%, rgb(126 115 255 / 90%) 50%, rgb(147 156 255 / 90%) 50%);
+    background: var(--btn-default);
     border-color: rgba(220, 220, 220, 0.6);
 }
 
@@ -1613,7 +1603,7 @@ input[type="search"]:focus,
 input[type="number"]:focus,
 input[type="password"]:focus,
 textarea:focus {
-    background: linear-gradient(to bottom, rgb(124 113 255 / 60%) 0%, rgb(126 115 255 / 90%) 50%, rgb(147 156 255 / 90%) 50%);
+    background: var(--btn-default);
     border-color: rgba(220, 220, 220, 0.6);
     box-shadow: 0 0 6px rgba(255, 255, 255, 0.4) inset;
 }
@@ -1621,7 +1611,7 @@ textarea:focus {
 
 input::placeholder,
 textarea::placeholder {
-    color: #bfc0f382;
+    color: #ffffff88;
     font-style: italic;
 }
 
@@ -1633,7 +1623,7 @@ select {
     color: #fff;
     background-image: linear-gradient(to bottom, rgba(120, 120, 120, 0.8), rgba(96, 96, 96, 0.8));
     /* dark red with alpha */
-    border: 1px solid rgba(200, 200, 200, 0.4);
+    border: 1px solid #fff4;
     border-radius: 6px;
     cursor: pointer;
     outline: none;
@@ -1715,7 +1705,7 @@ select::-ms-expand {
 }
 
 hr {
-    border: 2px solid#dbd9ff;
+    border: 1px solid #fff4;
     height: 2px;
     background-color: transparent;
     box-shadow: 0 2px 6px rgba(139, 139, 139, 0.5);
@@ -1747,7 +1737,7 @@ hr {
 
 /* i like stylizing */
 fieldset {
-    border: 1.5px inset #c2bdff;
+    border: 1px solid #fff4;
     box-shadow: 0 4px 10px rgb(255 221 221 / 50%) inset;
     border-radius: 6px;
     padding: 1em;
@@ -1795,7 +1785,7 @@ img[src$=".svg"]:not(.nohover):active {
 input[type="color"] {
     width: 50px;
     height: 30px;
-    border: 1px inset #d9ccff;
+    border: 1px solid #fff4;
     background-image: var(--btn-default);
     border-radius: 5px;
     padding: 0;
@@ -1860,7 +1850,7 @@ input[type="color"]:active {
 ::-webkit-scrollbar-thumb {
   background: rgba(255, 255, 255, 0.45); /* red thumb at 45% opacity */
   border-radius: 8px;
-  border: 3px solid transparent;    /* gives a padded look */
+  border: 1px solid #fff4;
   background-clip: padding-box;
   box-shadow: inset 0 0 0 1px rgba(0,0,0,0.04); /* subtle depth */
   transition: background-color 150ms ease, box-shadow 150ms ease;
@@ -1891,7 +1881,7 @@ input[type="color"]:active {
 }
 
 #exploreresults {
-    border: 1px solid rgb(187, 187, 187);
+    border: 1px solid #fff4;
         background-color: rgb(75, 75, 75);
         box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
         margin-top: 5px;
@@ -1904,7 +1894,7 @@ input[type="color"]:active {
 
 .result {
     border-radius: 10px;
-    border: 1px solid rgb(212, 212, 212);
+    border: 1px solid #fff4;
     background-image: var(--btn-default);
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
     margin: 10px 0;
@@ -1924,7 +1914,7 @@ input[type="color"]:active {
 
 #nsfwwarning {
     background-image: var(--btn-default);
-    border: 1px solid rgb(200, 200, 200);
+    border: 1px solid #fff4;
     color: #fff;
     padding: 10px;
     border-radius: 5px;
@@ -1950,7 +1940,7 @@ input[type="color"]:active {
 
 #nsfwwarning button {
     background-color: rgba(126, 126, 126, 0.2);
-    border: 1px solid rgba(48, 48, 48, 0.5);
+    border: 1px solid #fff4;
     color: #fff;
     box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.2);
     padding: 5px 10px;
@@ -1974,7 +1964,7 @@ input[type="color"]:active {
     width: 95%;
     height: 100%;
     object-fit: cover;
-    border: 1px solid rgb(200, 200, 200);
+    border: 1px solid #fff4;
     background-color: rgb(75, 75, 75);
      border-radius: 5px;
    /* squeeze text */
