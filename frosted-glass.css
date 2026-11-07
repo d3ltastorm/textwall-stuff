@@ -6,8 +6,8 @@ body {
 }
 
 :root {
-    --btn-dim: linear-gradient(to bottom, rgb(0 0 0 / 30%) 4%, rgb(0 0 0 / 40%) 50%, rgb(194 194 194 / 50%) 50%);
-    --btn-default: linear-gradient(to bottom, rgb(0 0 0 / 30%) 4%, rgb(0 0 0 / 40%) 50%, rgb(133 133 133 / 60%) 50%);
+    --btn-dim: linear-gradient(to bottom, rgb(62 62 62 / 30%) 4%, rgb(62 62 62 / 40%) 50%, rgb(125 125 125 / 50%) 50%);
+    --btn-default: linear-gradient(to bottom, rgb(125 125 125 / 30%) 4%, rgb(125 125 125 / 40%) 50%, rgb(145 145 145 / 60%) 50%);
     --btn-hover: linear-gradient(to bottom, rgb(140 145 192 / 30%) 4%, rgb(140 145 192 / 40%) 50%, rgb(195 190 255 / 60%) 50%);
     --btn-active: linear-gradient(to bottom, rgb(125 122 192 / 30%) 4%, rgb(125 122 192 / 40%) 50%, rgb(138 128 255 / 60%) 50%);
     --btn-on: linear-gradient(to bottom, rgb(140 145 192 / 30%) 4%, rgb(140 145 192 / 40%) 50%, rgb(195 190 255 / 60%) 50%)
